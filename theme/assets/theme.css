@@ -70,3 +70,40 @@
 .tns-nav button {
   width: 20px;
   border-radius: 10px; }
+
+.collection__basic {
+  width: 100%;
+  height: 796px;
+  background-color: #0ff;
+  position: relative; }
+
+.collection__basic img {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.collection__basic .collection__basic-caption {
+  padding: 70px;
+  width: 60%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--content {
+  margin-bottom: 20px; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--title p {
+  font-size: 30px; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--comment {
+  margin-top: 30px; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--comment p {
+  font-size: 20px; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--comment--takethislook {
+  margin-top: 30px; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--comment--takethislook a {
+  text-decoration: underline; }

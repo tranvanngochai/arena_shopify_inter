@@ -1,0 +1,75 @@
+<div class="container collection__basic">
+    <img src="{{ section.settings.image | img_url : 'master' }}" alt="" >
+    <div class="collection__basic-caption">
+        <div class="collection__basic-caption--content">
+            <p>{{section.settings.content}}</p>
+        </div>
+        <div class="collection__basic-caption--heading">
+            <h1>{{section.settings.heading}}</h1>
+        </div>
+        <div class="collection__basic-caption--title">
+            <p>{{section.settings.title}}</p>
+        </div>
+        <div class="collection__basic-caption--comment">
+            {{section.settings.comment}}
+        </div>
+        <div class="collection__basic-caption--comment--takethislook">
+            <a href="">{{section.settings.takethislook}}</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% schema %}
+{
+    "name": "Collection basic section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "image"
+        },
+        {
+            "type": "text",
+            "id": "content",
+            "label": "Content",
+            "info": "content"
+        },
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title"
+        },
+        {
+            "type": "richtext",
+            "id": "comment",
+            "label": "Comment"
+        },
+        {
+            "type": "text",
+            "id": "takethislook",
+            "label": "Take This Look"
+        }
+
+    ],
+    "blocks":[
+       
+        
+    ],
+    "presets": [
+        {
+            "category": "Advanced layout",
+            "name": "Collection basic section"
+        }
+    ]
+}
+{% endschema %}
