@@ -6,21 +6,6 @@
 .slideshow-container .controls {
   display: none; }
 
-.slideshow-container .controls .next, .slideshow-container .controls .prev {
-  list-style: none;
-  width: 40px;
-  height: 40px;
-  background-color: var(--text-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  color: var(--white-color); }
-
-.slideshow-container .controls .next:hover, .slideshow-container .controls .prev:hover {
-  background-color: rgba(16, 49, 120, 0.529412); }
-
 .slideshow-container .my-slider .slider-item {
   width: 100%;
   position: relative; }
@@ -42,18 +27,32 @@
   width: max-content; }
 
 .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
-  border: 1px solid #000;
-  padding: 10px; }
+  border: 1px solid #494f56;
+  box-sizing: border-box;
+  padding: 5px 30px;
+  font-size: 14px;
+  line-height: 189%;
+  letter-spacing: .1px;
+  color: #252a2f;
+  font-family: Lato,sans-serif; }
+
+.slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-heading {
+  margin: 24px auto 60px;
+  max-width: 742px; }
 
 .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-heading h1 {
-  font-size: 50px; }
+  font-size: 72px;
+  line-height: 120%;
+  letter-spacing: 2px;
+  color: #0f1214;
+  font-family: Playfair Display,serif; }
 
 .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button {
   margin: auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: #7fffd4;
+  background: #494f56;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -61,8 +60,16 @@
   align-items: center;
   justify-content: center; }
 
-.slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i, .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button span {
-  padding: 10px; }
+.slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button span {
+  padding: 11px 11px 11px 32px;
+  font-size: 14px;
+  line-height: 189%;
+  letter-spacing: .1px;
+  color: #fff; }
+
+.slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i {
+  padding: 11px 32px 11px 11px;
+  color: #fff; }
 
 .tns-nav {
   transform: translateY(-50px); }
@@ -74,7 +81,6 @@
 .collection__basic {
   width: 100%;
   height: 796px;
-  background-color: #0ff;
   position: relative; }
 
 .collection__basic img {
@@ -83,27 +89,176 @@
   left: 0; }
 
 .collection__basic .collection__basic-caption {
-  padding: 70px;
+  padding: 72px;
   width: 60%;
+  height: 509px;
   background-color: #fff;
   position: absolute;
   bottom: 0;
   right: 0; }
 
-.collection__basic .collection__basic-caption .collection__basic-caption--content {
-  margin-bottom: 20px; }
+.collection__basic .collection__basic-caption .collection__basic-caption--content p {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: .2px;
+  color: #494f56; }
+
+.collection__basic .collection__basic-caption .collection__basic-caption--heading h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 131%;
+  letter-spacing: 1.5px;
+  color: #0f1214; }
 
 .collection__basic .collection__basic-caption .collection__basic-caption--title p {
-  font-size: 30px; }
+  font-size: 36px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  color: #0f1214; }
 
 .collection__basic .collection__basic-caption .collection__basic-caption--comment {
-  margin-top: 30px; }
+  margin: 32px auto 37px; }
 
 .collection__basic .collection__basic-caption .collection__basic-caption--comment p {
-  font-size: 20px; }
-
-.collection__basic .collection__basic-caption .collection__basic-caption--comment--takethislook {
-  margin-top: 30px; }
+  font-size: 14px;
+  line-height: 189%;
+  letter-spacing: .1px;
+  color: #494f56; }
 
 .collection__basic .collection__basic-caption .collection__basic-caption--comment--takethislook a {
-  text-decoration: underline; }
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 189%;
+  letter-spacing: .4px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #252a2f; }
+
+.banner-section {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  height: 652px; }
+
+.banner-section .banner-container {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.banner-section .banner-container .banner__caption {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center; }
+
+.banner-section .banner-container .banner__caption .banner__caption--heading {
+  margin-bottom: 12px; }
+
+.banner-section .banner-container .banner__caption .banner__caption--heading h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 122%;
+  letter-spacing: 1.5px;
+  color: #fff; }
+
+.banner-section .banner-container .banner__caption .banner__caption--saleoff p {
+  font-size: 30px;
+  line-height: 148%;
+  letter-spacing: .2px;
+  color: #fff; }
+
+.banner-section .banner-container .banner__caption #banner__caption--countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto; }
+
+.banner-section .banner-container .banner__caption #banner__caption--countdown .days, .banner-section .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section .banner-container .banner__caption #banner__caption--countdown .seconds {
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 9px;
+  padding: 11px 28px;
+  margin-right: 15px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 189%;
+  letter-spacing: .2;
+  color: #fff; }
+
+.banner-section .banner-container .banner__caption #banner__caption--countdown .days p, .banner-section .banner-container .banner__caption #banner__caption--countdown .hours p, .banner-section .banner-container .banner__caption #banner__caption--countdown .minutes p, .banner-section .banner-container .banner__caption #banner__caption--countdown .seconds p {
+  color: #fff; }
+
+.banner-section .banner-container .banner__caption .banner__caption--button {
+  background: #fff;
+  padding: 11px 47px;
+  color: #494f56;
+  letter-spacing: .1px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 189%; }
+
+.latestnews-section {
+  width: 100%;
+  height: 669px; }
+
+.latestnews-section .latestnews--heading {
+  margin: 16px auto 8px; }
+
+.latestnews-section .latestnews--heading h1 {
+  font-size: 30px;
+  line-height: 148%;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #0f1214; }
+
+.latestnews-section .latestnews--content {
+  margin-bottom: 40px; }
+
+.latestnews-section .latestnews--content p {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: .2px;
+  text-align: center;
+  color: #494f56; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-top {
+  margin-top: 14px;
+  display: flex;
+  align-items: center; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-top p {
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: .1px;
+  color: #494f56;
+  margin: 0; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-top p:first-child {
+  margin-right: 10px; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-title {
+  margin: 2px auto 12px; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-title p {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: .2px;
+  color: #0f1214; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-readmore p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 189%;
+  letter-spacing: .4px;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  color: #494f56; }
+
+.latestnews-section .blog__list .blog__list--item .blog__list--item-readmore p:hover {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #252a2f; }

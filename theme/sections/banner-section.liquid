@@ -1,0 +1,122 @@
+<div class="container-fluid banner-section" style="background-image: url('{{section.settings.image | img_url: 'master'}}')">
+    <div class="container banner-container">
+        <div class="banner__caption">
+        <div class="banner__caption--heading">
+            <h1>{{section.settings.heading}}</h1>
+        </div>
+        <div class="banner__caption--saleoff">
+            <p>{{section.settings.saleoff}}</p>
+        </div>
+        {%- if section.settings.countdown == true -%}
+        <div id="banner__caption--countdown">
+            <div class="days">
+                <span id="days"></span>
+                <p>Days</p>
+            </div>
+            <div class="hours">
+                <span id="hours"></span>
+                <p>Hrs</p>
+            </div>
+            <div class="minutes">
+                <span id="minutes"></span>
+                <p>Mins</p>
+            </div>
+            <div class="seconds">
+                <span id="seconds"></span>
+                <p>Secs</p>
+            </div>            
+        </div> 
+        {%- endif -%}
+        {%- unless section.settings.button == blank -%}
+        <button class="banner__caption--button">{{section.settings.button}}</button>
+        {%- endunless -%}
+    </div>
+    </div>
+</div>
+
+
+
+<script>
+    (function () {
+    const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+    
+    let birthday = " June 20 , 2021 00:00:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function() {    
+  
+          let now = new Date().getTime(),
+              distance = countDown - now;
+  
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
+            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+  
+          //do something later when date is reached
+          if (distance < 0) {
+            let headline = document.getElementById("headline"),
+                countdown = document.getElementById("countdown"),
+                content = document.getElementById("content");
+  
+            headline.innerText = "It's my birthday!";
+            countdown.style.display = "none";
+            content.style.display = "block";
+  
+            clearInterval(x);
+          }
+          //seconds
+        }, 0)
+    }());
+</script>
+
+
+
+
+{% schema %}
+{
+    "name": "Banner section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "label": "Image",
+            "id": "image"
+        },
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "saleoff",
+            "label": "Sale Off"
+        },
+        {
+            "type": "checkbox",
+            "id": "countdown",
+            "default": false,
+            "label": "CountDown"
+        },
+        {
+            "type": "text",
+            "id": "button",
+            "label": "Button"
+        }
+        
+
+    ],
+    "blocks":[
+       
+        
+    ],
+    "presets": [
+        {
+            "category": "Advanced layout",
+            "name": "Banner section"
+        }
+    ]
+}
+{% endschema %}

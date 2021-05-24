@@ -1,7 +1,9 @@
 {
   "theme":[
     "19_slideshow",
-    "20_collection-basic-section"
+    "20_collection-basic-section",
+    "21_banner-section",
+    "22_latest-new-section"
   ],
   "themes": [
     "1_functions",

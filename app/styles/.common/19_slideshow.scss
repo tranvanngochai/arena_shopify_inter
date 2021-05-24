@@ -4,21 +4,6 @@
     padding: 0;
     .controls {
         display: none;
-        .prev, .next{
-          list-style: none;
-          width: 40px;
-          height: 40px;
-          background-color: var(--text-color);
-          border-radius:50%; 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 30px; 
-          color: var(--white-color);
-          &:hover{
-            background-color: #10317887;
-          }    
-        }
     }
     .my-slider{
         .slider-item{
@@ -37,28 +22,45 @@
                     margin: auto;
                     width: max-content;
                     p{
-                        border: 1px solid black;
-                        padding: 10px;
+                        border: 1px solid #494F56;
+                        box-sizing: border-box;
+                        padding: 5px 30px;
+                        font-size: 14px;
+                        line-height: 189%;
+                        letter-spacing: 0.1px;
+                        color: #252A2F;
+                        font-family: 'Lato', sans-serif;
                     }
                 }
                 .slider-item__caption-heading{
+                    margin: 24px auto 60px auto;
+                    max-width: 742px;
                     h1{
-                        font-size: 50px;
+                        font-size: 72px;
+                        line-height: 120%;
+                        letter-spacing: 2px;
+                        color: #0F1214;
+                        font-family: 'Playfair Display', serif;
                     }
                 }
                 .slider-item__caption-button{
                     margin: auto;
                     width: max-content;
-                    background-color: aquamarine;
+                    background: #494F56;
                     height: max-content;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     span{
-                        padding: 10px;
+                        padding: 11px 11px 11px 32px;
+                        font-size: 14px;
+                        line-height: 189%;
+                        letter-spacing: 0.1px;
+                        color: #FFFFFF;
                     }
                     i{
-                        padding: 10px;
+                        padding: 11px 32px 11px 11px;
+                        color: #FFFFFF
                     }
                 }
             }
