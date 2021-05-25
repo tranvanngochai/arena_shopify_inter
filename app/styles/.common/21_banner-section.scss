@@ -66,3 +66,107 @@
         }
     }
 }
+
+
+@include desktop{
+    .banner-section{
+        height: 500px;
+        .banner-container{
+            .banner__caption{
+                .banner__caption--heading{
+                    margin-bottom: 12px;
+                    h1{
+                        font-size: 30px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    p{
+                        font-size: 25px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 35px auto;
+                    .days, .hours, .minutes, .seconds{
+                        padding: 6px 20px;
+                        margin-right: 10px;
+                        font-size: 25px;
+                    }
+                }
+                .banner__caption--button{
+                    padding: 9px 35px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+
+@include tablet{
+    .banner-section{
+        height: 400px;
+        .banner-container{
+            .banner__caption{
+                .banner__caption--heading{
+                    margin-bottom: 10px;
+                    h1{
+                        font-size: 25px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 30px auto;
+                    .days, .hours, .minutes, .seconds{
+                        padding: 5px 15px;
+                        margin-right: 10px;
+                        font-size: 20px;
+                    }
+                }
+                .banner__caption--button{
+                    padding: 5px 20px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile{
+    .banner-section{
+        height: 200px;
+        .banner-container{
+            .banner__caption{
+                width: 100%;
+                .banner__caption--heading{
+                    margin-bottom: 5px;
+                    h1{
+                        font-size: 17px;
+                        margin: 0;
+                    }
+                }
+                .banner__caption--saleoff{
+                    p{
+                        font-size: 17px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 15px auto;
+                    .days, .hours, .minutes, .seconds{
+                        padding: 4px 10px;
+                        margin-right: 7px;
+                        font-size: 13px;
+                    }
+                }
+                .banner__caption--button{
+                    padding: 3px 10px;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}

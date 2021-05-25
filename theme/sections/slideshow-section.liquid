@@ -13,13 +13,13 @@
         <div class="my-slider my-slider-{{section.id}}">
             {%- for block in section.blocks -%}         
             <div class="slider-item">
-                <img src="{{ block.settings.img_slide | img_url : '1920x850' }}" alt="" >
+                <img src="{{ block.settings.img_slide | img_url : 'master' }}" alt="" >
                 <div class="slider-item__caption">
                     <div class="slider-item__caption-content">
                         <p>{{block.settings.content}}</p>
                     </div>
                     <div class="slider-item__caption-heading">
-                        <h1>{{block.settings.heading}}</h1>
+                        {{block.settings.heading}}
                     </div>
                     <div class="slider-item__caption-button">
                         <span>{{block.settings.button}}</span>
