@@ -1,4 +1,5 @@
-<div class="container latestnews-section">
+<div class="container-fluid latestnews-section-full{% if section.settings.style == 'style_2' %}-style_2{%- endif -%}">
+    <div class="container latestnews-section">
     {%- for block in section.blocks -%}
     <div class="latestnews--heading">
         <h1>{{section.settings.heading}}</h1>
@@ -7,7 +8,7 @@
         {{section.settings.content}}
     </div>
 
-    <ul class="controls" id="customize-controls-{{section.id}}" style="display:none" aria-label="Carousel Navigation" tabindex="0">
+    <ul class="controls" id="customize-controls-{{section.id}}" {% if section.settings.style == 'style_1' %}style="display:none"{%- endif -%} aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
             <i class="fas fa-angle-left fa-5x"></i>
         </li>
@@ -20,31 +21,49 @@
         {% assign Listblogs = blogs[block.settings.list_blog] %}
             {% for article in Listblogs.articles %}
                 <div class="blog__list--item">
-                    <a href="{{ article.url }}">
+                    
+                     
+                        <div class="blog__list--item-heading">
+                            <h1>{{section.settings.heading}}</h1>
+                        </div>
                         <div class="blog__list--item-img">
                             <img src="{{ article.image | img_url: 'master' }}" alt="">
                         </div>
-                        <div class="blog__list--item-top">
-                            <p>{{article.author}}</p>
-                            <p>{{article.created_at}}</p>
+                        <div class="blog__list--item-caption">
+                            <div class="blog__list--item-top">
+                                <p>{{article.author}}</p>
+                                <p>{{article.created_at}}</p>
+                            </div>
+                            <div class="blog__list--item-title">
+                                <p>{{ article.title}}</p>
+                            </div>
+                            {%- if section.settings.style == 'style_2' -%}
+                            <div class="blog__list--item--content">
+                                <p>{{article.content}}</p>
+                            </div>
+                            {%- endif -%}
+                            {%- unless block.settings.readmore == blank -%}
+                            <div class="blog__list--item-readmore"> 
+                                <p>{{block.settings.readmore}}</p>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.6668 7.99927H1.3335" stroke="#494F56" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.48145 2.66675L14.6666 8.00008L9.48145 13.3334" stroke="#494F56" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            {%- endunless -%}
                         </div>
-                        <div class="blog__list--item-title">
-                            <p>{{ article.title}}</p>
-                        </div>
-                        {%- unless block.settings.readmore == blank -%}
-                        <div class="blog__list--item-readmore">
-                            <p>{{block.settings.readmore}}</p>
-                        </div>
-                        {%- endunless -%}
-                    </a>
+                      
+                    
                 </div>             
             {% endfor %}
     </div> 
     {%- endfor -%}
+    </div>
 </div>
 
 
 
+{% if section.settings.style == 'style_1' %}
 <script>
     var slider = tns({
     container: '.my-slider-{{section.id}}',
@@ -78,6 +97,42 @@
 
 
 
+{%- else -%}
+
+<script>
+    var slider = tns({
+    container: '.my-slider-{{section.id}}',
+    loop: true,
+    items: 1,
+    gutter: 20,
+    slideBy: "page",
+    nav: false,
+    autoplay: false,
+    speed: 400,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    controlsContainer: "#customize-controls-{{section.id}}",
+    responsive: {
+      320: {
+        items: 1
+      },
+      766: {
+        items: 1,
+        gutter: 10
+      },
+
+      1024: {
+        items: 1,
+        gutter: 28
+        {% comment %} edgePadding: 30 {% endcomment %}
+      }
+    }
+  });
+</script>
+
+{%- endif -%}
+
+
 
 {% schema %}
 {
@@ -92,6 +147,15 @@
             "type": "richtext",
             "id": "content",
             "label": "Content"
+        },
+         {
+            "type": "radio",
+            "id": "style",
+            "options": [
+                { "value": "style_1", "label": "Style 1"},
+                { "value": "style_2", "label": "Style 2"}
+            ],
+            "label": "Style"
         }
     ],
     "blocks":[

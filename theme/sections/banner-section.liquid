@@ -1,4 +1,4 @@
-<div class="container-fluid banner-section" style="background-image: url('{{section.settings.image | img_url: 'master'}}')">
+<div class="container-fluid banner-section{% if section.settings.style == 'style_2' %}-style_2{% endif %}" style="background-image: url('{{section.settings.image | img_url: 'master'}}')">
     <div class="container banner-container">
         <div class="banner__caption">
         <div class="banner__caption--heading">
@@ -6,6 +6,10 @@
         </div>
         <div class="banner__caption--saleoff">
             <p>{{section.settings.saleoff}}</p>
+            <p>{{section.settings.saleoff_onsuit}}</p>
+        </div>
+        <div class="banner__caption--content">
+            <p>{{section.settings.content}}</p>
         </div>
         {%- if section.settings.countdown == true -%}
         <div id="banner__caption--countdown">
@@ -28,8 +32,17 @@
         </div> 
         {%- endif -%}
         {%- unless section.settings.button == blank -%}
-        <button class="banner__caption--button">{{section.settings.button}}</button>
+        <button class="banner__caption--button">
+            {{section.settings.button}}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6666 7.99925H1.33325" stroke="#252A2F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.48145 2.66667L14.6666 8L9.48145 13.3333" stroke="#252A2F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
         {%- endunless -%}
+        
+        
+
     </div>
     </div>
 </div>
@@ -80,6 +93,15 @@
     "name": "Banner section",
     "settings": [
         {
+            "type": "radio",
+            "id": "style",
+            "options": [
+                { "value": "style_1", "label": "Style 1"},
+                { "value": "style_2", "label": "Style 2"}
+            ],
+            "label": "Style"
+        },
+        {
             "type": "image_picker",
             "label": "Image",
             "id": "image"
@@ -93,6 +115,16 @@
             "type": "text",
             "id": "saleoff",
             "label": "Sale Off"
+        },
+        {
+            "type": "text",
+            "id": "saleoff_onsuit",
+            "label": "On Suit"
+        },
+        {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
         },
         {
             "type": "checkbox",

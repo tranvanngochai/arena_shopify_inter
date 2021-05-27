@@ -1,18 +1,9 @@
-<div class="container collection__basic">
+<div class="container collection__basic{% if section.settings.style == 'style_2' %}-style_2{% endif %}">
     <img class="image_full" src="{{ section.settings.image | img_url : 'master' }}" alt="" >
     {%- if section.settings.show_image_additional == true -%}
         <img class="image_additional" src="{{ section.settings.image_additional | img_url : 'master' }}" alt="" >
-        {% style %}
-            .collection__basic{
-                height: 870px;
-            }
-            .image_full{
-                width: 570px;
-                height: 870px;
-            }
-        {% endstyle %}
     {%- endif -%}
-    <div class="collection__basic-caption {% if section.settings.caption_alignment == 'center' %}w40{%- endif -%}">
+    <div class="collection__basic-caption">
         <div class="collection__basic-caption--content">
             <p>{{section.settings.content}}</p>
         </div>
@@ -27,26 +18,14 @@
         </div>
         <div class="collection__basic-caption--comment--takethislook">
             <a href="">{{section.settings.takethislook}}</a>
-            {% if section.settings.caption_alignment == 'center' %}
+            
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0ZM10.0001 18.6364C5.2304 18.6364 1.36377 14.7697 1.36377 9.99999C1.36377 5.23026 5.2304 1.36363 10.0001 1.36363C14.7699 1.36363 18.6365 5.23026 18.6365 9.99999C18.6365 12.2905 17.7266 14.4872 16.107 16.1068C14.4873 17.7265 12.2906 18.6364 10.0001 18.6364Z" fill="#494F56"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.16372 5.8545C8.89507 5.60418 8.47644 5.61156 8.21679 5.87121C7.95714 6.13086 7.94976 6.54949 8.20008 6.81814L11.2546 9.87268L8.20008 12.9272C7.94976 13.1959 7.95714 13.6145 8.21679 13.8742C8.47644 14.1338 8.89507 14.1412 9.16372 13.8909L13.1819 9.87268L12.2183 8.90905L9.16372 5.8545Z" fill="#494F56"/>
             </svg>
-            {%- endif -%}
+            
         </div>
     </div>
-    {%- if section.settings.caption_alignment == 'center' -%}
-        {%- style -%}
-            .collection__basic-caption.w40{
-                top: 50%;
-                transform: translateY(-50%);
-                width: 40%;
-            }
-            .collection__basic-caption--comment--takethislook a{
-                text-decoration-line: none !important;
-            }
-        {%- endstyle -%}
-    {%- endif -%}
 </div>
 
 
@@ -58,6 +37,15 @@
 {
     "name": "Collection basic section",
     "settings": [
+        {
+            "type": "radio",
+            "id": "style",
+            "options": [
+                { "value": "style_1", "label": "Style 1"},
+                { "value": "style_2", "label": "Style 2"}
+            ],
+            "label": "Style"
+        },
         {
             "type": "image_picker",
             "label": "Image",
@@ -73,15 +61,6 @@
             "id": "show_image_additional",
             "default": false,
             "label": "Show Image Additional"
-        },
-        {
-            "type": "radio",
-            "id": "caption_alignment",
-            "options": [
-                { "value": "bottom", "label": "Bottom"},
-                { "value": "center", "label": "Center"}
-            ],
-            "label": "Caption alignment"
         },
         {
             "type": "text",
