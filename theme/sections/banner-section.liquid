@@ -6,7 +6,7 @@
         </div>
         <div class="banner__caption--saleoff">
             <p>{{section.settings.saleoff}}</p>
-            <p>{{section.settings.saleoff_onsuit}}</p>
+            <p style="color:{{section.settings.color}}" >{{section.settings.saleoff_onsuit}}</p>
         </div>
         <div class="banner__caption--content">
             <p>{{section.settings.content}}</p>
@@ -120,6 +120,12 @@
             "type": "text",
             "id": "saleoff_onsuit",
             "label": "On Suit"
+        },
+        {
+            "type": "color",
+            "id": "color",
+            "label": "Color On Suit",
+            "default": "#053399"
         },
         {
             "type": "textarea",

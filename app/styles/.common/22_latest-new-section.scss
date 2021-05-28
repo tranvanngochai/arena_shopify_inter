@@ -225,7 +225,7 @@
             .blog__list--item{
                 .blog__list--item-top{
                     margin-top: 10px;
-                    display: block;
+                    display: block !important;
                     p{
                         font-size: 13px;
                         margin: 0;
@@ -269,7 +269,7 @@
             .blog__list--item{
                 .blog__list--item-top{
                     margin-top: 10px;
-                    display: block;
+                    display: block !important;
                     p{
                         font-size: 13px;
                         margin: 0;
@@ -303,5 +303,43 @@
                 font-size: 25px;
             }
         }
+        .latestnews--content{
+            display: block;
+            display: -webkit-box;
+            max-width: 100%;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blog__list{
+            .blog__list--item{
+                .blog__list--item-top{
+                    margin-top: 10px;
+                    display: block !important;
+                    p{
+                        font-size: 13px;
+                        margin: 0;
+                        &:first-child{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .blog__list--item-title{
+                    margin: 2px auto 12px auto;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+                .blog__list--item-readmore{
+                    p{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
+    
 }
+
+

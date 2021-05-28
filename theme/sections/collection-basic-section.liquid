@@ -3,7 +3,7 @@
     {%- if section.settings.show_image_additional == true -%}
         <img class="image_additional" src="{{ section.settings.image_additional | img_url : 'master' }}" alt="" >
     {%- endif -%}
-    <div class="collection__basic-caption">
+    <div class="collection__basic-caption" style="background-color: {{section.settings.background_color}}">
         <div class="collection__basic-caption--content">
             <p>{{section.settings.content}}</p>
         </div>
@@ -87,6 +87,12 @@
             "type": "text",
             "id": "takethislook",
             "label": "Take This Look"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color Caption",
+            "default": "#fff"
         }
 
     ],

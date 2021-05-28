@@ -1,5 +1,5 @@
 
-<div class="container-fluid slideshow-container">
+<div class="container-fluid slideshow-container{%- if section.settings.style == 'style_2' -%}-style_2{%- endif -%}" style="background-color: {{section.settings.background_color}}">
         <ul class="controls" id="customize-controls-{{section.id}}" style="display:none" aria-label="Carousel Navigation" tabindex="0">
             <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
                 <i class="fas fa-angle-left fa-5x"></i>
@@ -9,11 +9,10 @@
             </li>
         </ul>
 
-
         <div class="my-slider my-slider-{{section.id}}">
             {%- for block in section.blocks -%}         
             <div class="slider-item">
-                <img src="{{ block.settings.img_slide | img_url : 'master' }}" alt="" >
+                <img class="img_left" src="{{ block.settings.img_slide | img_url : 'master' }}" alt="" >
                 <div class="slider-item__caption">
                     <div class="slider-item__caption-content">
                         <p>{{block.settings.content}}</p>
@@ -21,19 +20,24 @@
                     <div class="slider-item__caption-heading">
                         {{block.settings.heading}}
                     </div>
+                    {%- unless block.settings.button == blank -%}
                     <div class="slider-item__caption-button">
                         <span>{{block.settings.button}}</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
+                    {%- endunless -%}
                 </div>
+                <img class="img_right" src="{{ block.settings.img_slide_style_2 | img_url : 'master' }}" alt="" >
             </div>
             {%- endfor -%}
-        </div>    
+        </div>
+
+        
 
 </div> 
 
 
-
+{%- if section.settings.style == 'style_1' -%}
 <script>
     var slider = tns({
     container: '.my-slider-{{section.id}}',
@@ -59,14 +63,56 @@
   });
 </script>
 
+{% elsif section.settings.style == 'style_2' %}
+<script>
+    var slider = tns({
+    container: '.my-slider-{{section.id}}',
+    loop: true,
+    items: 1,
+    slideBy: 1,
+    nav: true,
+    navPosition: "bottom",
+    autoplay: false,
+    speed: 400,
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    controlsContainer: "#customize-controls-{{section.id}}",
+    axis: "vertical",
+    swipeAngle: false,
+    responsive: {
+      640: {
+        items: 1
+      },
 
+      768: {
+        items: 1,
+      }
+    }
+  });
+</script>
+{%- endif -%}
 
 
 {% schema %}
 {
     "name": "Slideshow section",
     "settings": [
-
+        {
+            "type": "radio",
+            "id": "style",
+            "options": [
+                { "value": "style_1", "label": "Style 1"},
+                { "value": "style_2", "label": "Style 2"}
+            ],
+            "label": "Style"
+            
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background color",
+            "default": "#F9F6F0"
+        }
     ],
     "blocks":[
         {
@@ -77,6 +123,11 @@
                     "type": "image_picker",
                     "label": "Image Slide",
                     "id": "img_slide"
+                },
+                {
+                    "type": "image_picker",
+                    "label": "Image Slide",
+                    "id": "img_slide_style_2"
                 },
                 {
                     "type": "text",
