@@ -68,6 +68,9 @@
                 font-weight: bold;
                 font-size: 14px;
                 line-height: 189%;
+                svg{
+                    display: none;
+                }
             }
         }
     }
@@ -208,6 +211,60 @@
             }
         }
     }
+
+    .banner-section-style_2{
+        background-position: 90%;
+        .banner-container{
+            .banner__caption{
+                left: 10%;
+                .banner__caption--heading{
+                    margin-bottom: 8px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    margin-bottom: 7px;
+                    p{
+                        font-size: 40px;
+                        &:first-child{
+                            margin: 0;
+                        }
+                        &:last-child{
+                            margin-left: 10px;
+                        }   
+                    }
+                }
+                .banner__caption--content{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 24px auto 40px;
+                    .days, .hours, .minutes, .seconds{
+                        width: 80px;
+                        height: 80px;
+                        margin-left: 15px;
+                        font-size: 20px;
+                        span{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+                .banner__caption--button{
+                    right: 0;
+                    padding: 11px 32px;
+                    svg{
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -238,6 +295,60 @@
                 .banner__caption--button{
                     padding: 5px 20px;
                     font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .banner-section-style_2{
+        background-position: 120%;
+        height: 600px;
+        .banner-container{
+            .banner__caption{
+                left: 1%;
+                .banner__caption--heading{
+                    margin-bottom: 8px;
+                    h1{
+                        font-size: 20px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    margin-bottom: 7px;
+                    p{
+                        font-size: 30px;
+                        &:first-child{
+                            margin: 0;
+                        }
+                        &:last-child{
+                            margin-left: 10px;
+                        }   
+                    }
+                }
+                .banner__caption--content{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 24px auto 40px;
+                    .days, .hours, .minutes, .seconds{
+                        width: 75px;
+                        height: 75px;
+                        margin-left: 15px;
+                        font-size: 17px;
+                        span{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+                .banner__caption--button{
+                    padding: 8px 20px;
+                    svg{
+                        margin-left: 12px;
+                    }
                 }
             }
         }
@@ -274,6 +385,152 @@
                 .banner__caption--button{
                     padding: 3px 10px;
                     font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .banner-section-style_2{
+        background-position: 200%;
+        height: 350px;
+        .banner-container{
+            .banner__caption{
+                left: 1%;
+                .banner__caption--heading{
+                    margin-bottom: 5px;
+                    h1{
+                        font-size: 15px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    margin-bottom: 5px;
+                    p{
+                        font-size: 20px;
+                        &:first-child{
+                            margin: 0;
+                        }
+                        &:last-child{
+                            margin-left: 8px;
+                        }   
+                    }
+                }
+                .banner__caption--content{
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 6px auto 16px;
+                    .days, .hours, .minutes, .seconds{
+                        width: 50px;
+                        height: 50px;
+                        margin-left: 10px;
+                        font-size: 13px;
+                        span{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+                .banner__caption--button{
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    svg{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile-xxs{
+    .banner-section{
+        height: 200px;
+        .banner-container{
+            .banner__caption{
+                width: 100%;
+                .banner__caption--heading{
+                    margin-bottom: 5px;
+                    h1{
+                        font-size: 17px;
+                        margin: 0;
+                    }
+                }
+                .banner__caption--saleoff{
+                    p{
+                        font-size: 17px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 15px auto;
+                    .days, .hours, .minutes, .seconds{
+                        padding: 4px 10px;
+                        margin-right: 7px;
+                        font-size: 13px;
+                    }
+                }
+                .banner__caption--button{
+                    padding: 3px 10px;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+
+    .banner-section-style_2{
+        background-position: 200%;
+        height: 318px;
+        .banner-container{
+            .banner__caption{
+                left: 1%;
+                .banner__caption--heading{
+                    margin-bottom: 3px;
+                    h1{
+                        font-size: 13px;
+                    }
+                }
+                .banner__caption--saleoff{
+                    margin-bottom: 3px;
+                    p{
+                        font-size: 17px;
+                        &:first-child{
+                            margin: 0;
+                        }
+                        &:last-child{
+                            margin-left: 7px;
+                        }   
+                    }
+                }
+                .banner__caption--content{
+                    p{
+                        font-size: 10px;
+                    }
+                }
+                #banner__caption--countdown{
+                    margin: 4px auto 8px;
+                    .days, .hours, .minutes, .seconds{
+                        width: 40px;
+                        height: 40px;
+                        margin-left: 8px;
+                        font-size: 11px;
+                        span{
+
+                        }
+                        p{
+
+                        }
+                    }
+                }
+                .banner__caption--button{
+                    padding: 5px 5px;
+                    font-size: 11px;
+                    svg{
+                        margin-left: 5px;
+                    }
                 }
             }
         }

@@ -61,6 +61,21 @@
       }
     }
   });
+
+    slider.getInfo();
+
+
+  // get slider info
+  var info = slider.getInfo(),
+    indexPrev = info.indexCached,
+      indexCurrent = info.index;
+      haha = info.slideCountNew;
+      hihi = info.displayIndex;
+    console.log(indexCurrent,indexPrev, haha, hihi);
+
+
+
+
 </script>
 
 {% elsif section.settings.style == 'style_2' %}

@@ -36,7 +36,7 @@
   justify-content: space-between; }
 
 .slideshow-container .my-slider .slider-item .img_left, .slideshow-container .my-slider .slider-item .img_right {
-  height: 887px; }
+  height: 848px; }
 
 .slideshow-container .my-slider .slider-item .slider-item__caption {
   text-align: center;
@@ -202,6 +202,11 @@
   display: none; }
 
 @media (max-width: 1199px) {
+  .slideshow-container {
+    height: 607px; }
+  .slideshow-container .my-slider .slider-item .img_left, .slideshow-container .my-slider .slider-item .img_right {
+    width: 400px;
+    height: 607px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
     padding: 5px 10px;
     font-size: 14px; }
@@ -214,6 +219,8 @@
     font-size: 13px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i {
     padding: 10px 25px 10px 10px; }
+  .slideshow-container-style_2 {
+    height: 607px; }
   .slideshow-container-style_2 .my-slider .slider-item .img_left, .slideshow-container-style_2 .my-slider .slider-item .img_right {
     width: 400px;
     height: 607px; }
@@ -229,6 +236,16 @@
     font-size: 12px; } }
 
 @media screen and (max-width: 991px) and (min-height: 500px) {
+  .slideshow-container {
+    height: 509px; }
+  .slideshow-container .tns-nav .tns-nav-active {
+    background: #0f1214 !important;
+    border-radius: 8px !important;
+    width: 25px;
+    height: 4px; }
+  .slideshow-container .my-slider .slider-item .img_left, .slideshow-container .my-slider .slider-item .img_right {
+    width: 335px;
+    height: 509px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
     padding: 5px 10px;
     font-size: 14px; }
@@ -241,6 +258,8 @@
     font-size: 11px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i {
     padding: 8px 20px 8px 8px; }
+  .slideshow-container-style_2 {
+    height: 509px; }
   .slideshow-container-style_2 .my-slider .slider-item .img_left, .slideshow-container-style_2 .my-slider .slider-item .img_right {
     width: 335px;
     height: 509px; }
@@ -256,6 +275,19 @@
     font-size: 10px; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .slideshow-container {
+    margin-bottom: 20px;
+    height: 258px; }
+  .slideshow-container .tns-nav {
+    margin: 35px auto 0; }
+  .slideshow-container .tns-nav .tns-nav-active {
+    background: #0f1214 !important;
+    border-radius: 8px !important;
+    width: 25px;
+    height: 4px; }
+  .slideshow-container .my-slider .slider-item .img_left, .slideshow-container .my-slider .slider-item .img_right {
+    width: 170px;
+    height: 258px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
     padding: 3px;
     font-size: 9px; }
@@ -269,6 +301,9 @@
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i {
     padding: 5px 10px 5px 5px;
     font-size: 10px; }
+  .slideshow-container-style_2 {
+    height: 258px;
+    margin-bottom: 30px; }
   .slideshow-container-style_2 .tns-nav .tns-nav-active {
     border: 2px solid #876c3d; }
   .slideshow-container-style_2 .tns-nav button {
@@ -289,6 +324,19 @@
     font-size: 7px; } }
 
 @media (max-width: 339px) {
+  .slideshow-container {
+    height: 230px;
+    margin-bottom: 30px; }
+  .slideshow-container .tns-nav {
+    margin: 35px auto 0; }
+  .slideshow-container .tns-nav .tns-nav-active {
+    background: #0f1214 !important;
+    border-radius: 8px !important;
+    width: 15px;
+    height: 4px; }
+  .slideshow-container .my-slider .slider-item .img_left, .slideshow-container .my-slider .slider-item .img_right {
+    width: 170px;
+    height: 230px; }
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
     padding: 3px;
     font-size: 8px; }
@@ -302,13 +350,17 @@
   .slideshow-container .my-slider .slider-item .slider-item__caption .slider-item__caption-button i {
     padding: 4px 7px 4px 4px;
     font-size: 8px; }
+  .slideshow-container-style_2 {
+    height: 230px;
+    margin-bottom: 30px; }
   .slideshow-container-style_2 .tns-nav .tns-nav-active {
     border: 2px solid #876c3d; }
   .slideshow-container-style_2 .tns-nav button {
     width: 7px;
     height: 7px; }
   .slideshow-container-style_2 .my-slider .slider-item .img_left, .slideshow-container-style_2 .my-slider .slider-item .img_right {
-    width: 170px; }
+    width: 170px;
+    height: 230px; }
   .slideshow-container-style_2 .my-slider .slider-item .slider-item__caption .slider-item__caption-content p {
     font-size: 10px; }
   .slideshow-container-style_2 .my-slider .slider-item .slider-item__caption .slider-item__caption-heading {
@@ -707,6 +759,9 @@
   font-size: 14px;
   line-height: 189%; }
 
+.banner-section .banner-container .banner__caption .banner__caption--button svg {
+  display: none; }
+
 .banner-section-style_2 {
   background-repeat: no-repeat;
   background-position: 70%;
@@ -830,7 +885,37 @@
     font-size: 25px; }
   .banner-section .banner-container .banner__caption .banner__caption--button {
     padding: 9px 35px;
-    font-size: 13px; } }
+    font-size: 13px; }
+  .banner-section-style_2 {
+    background-position: 90%; }
+  .banner-section-style_2 .banner-container .banner__caption {
+    left: 10%; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading {
+    margin-bottom: 8px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading h1 {
+    font-size: 20px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff {
+    margin-bottom: 7px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p {
+    font-size: 40px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:first-child {
+    margin: 0; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:last-child {
+    margin-left: 10px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--content p {
+    font-size: 16px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown {
+    margin: 24px auto 40px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .days, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .seconds {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+    font-size: 20px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button {
+    right: 0;
+    padding: 11px 32px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button svg {
+    margin-left: 12px; } }
 
 @media screen and (max-width: 991px) and (min-height: 500px) {
   .banner-section {
@@ -849,7 +934,37 @@
     font-size: 20px; }
   .banner-section .banner-container .banner__caption .banner__caption--button {
     padding: 5px 20px;
-    font-size: 10px; } }
+    font-size: 10px; }
+  .banner-section-style_2 {
+    background-position: 120%;
+    height: 600px; }
+  .banner-section-style_2 .banner-container .banner__caption {
+    left: 1%; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading {
+    margin-bottom: 8px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading h1 {
+    font-size: 20px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff {
+    margin-bottom: 7px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p {
+    font-size: 30px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:first-child {
+    margin: 0; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:last-child {
+    margin-left: 10px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--content p {
+    font-size: 16px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown {
+    margin: 24px auto 40px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .days, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .seconds {
+    width: 75px;
+    height: 75px;
+    margin-left: 15px;
+    font-size: 17px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button {
+    padding: 8px 20px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button svg {
+    margin-left: 12px; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .banner-section {
@@ -871,7 +986,91 @@
     font-size: 13px; }
   .banner-section .banner-container .banner__caption .banner__caption--button {
     padding: 3px 10px;
-    font-size: 8px; } }
+    font-size: 8px; }
+  .banner-section-style_2 {
+    background-position: 200%;
+    height: 350px; }
+  .banner-section-style_2 .banner-container .banner__caption {
+    left: 1%; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading {
+    margin-bottom: 5px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading h1 {
+    font-size: 15px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff {
+    margin-bottom: 5px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p {
+    font-size: 20px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:first-child {
+    margin: 0; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:last-child {
+    margin-left: 8px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--content p {
+    font-size: 12px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown {
+    margin: 6px auto 16px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .days, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .seconds {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 13px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button {
+    padding: 5px 10px;
+    font-size: 12px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button svg {
+    margin-left: 10px; } }
+
+@media (max-width: 339px) {
+  .banner-section {
+    height: 200px; }
+  .banner-section .banner-container .banner__caption {
+    width: 100%; }
+  .banner-section .banner-container .banner__caption .banner__caption--heading {
+    margin-bottom: 5px; }
+  .banner-section .banner-container .banner__caption .banner__caption--heading h1 {
+    font-size: 17px;
+    margin: 0; }
+  .banner-section .banner-container .banner__caption .banner__caption--saleoff p {
+    font-size: 17px; }
+  .banner-section .banner-container .banner__caption #banner__caption--countdown {
+    margin: 15px auto; }
+  .banner-section .banner-container .banner__caption #banner__caption--countdown .days, .banner-section .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section .banner-container .banner__caption #banner__caption--countdown .seconds {
+    padding: 4px 10px;
+    margin-right: 7px;
+    font-size: 13px; }
+  .banner-section .banner-container .banner__caption .banner__caption--button {
+    padding: 3px 10px;
+    font-size: 8px; }
+  .banner-section-style_2 {
+    background-position: 200%;
+    height: 318px; }
+  .banner-section-style_2 .banner-container .banner__caption {
+    left: 1%; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading {
+    margin-bottom: 3px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--heading h1 {
+    font-size: 13px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff {
+    margin-bottom: 3px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p {
+    font-size: 17px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:first-child {
+    margin: 0; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--saleoff p:last-child {
+    margin-left: 7px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--content p {
+    font-size: 10px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown {
+    margin: 4px auto 8px; }
+  .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .days, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .hours, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .minutes, .banner-section-style_2 .banner-container .banner__caption #banner__caption--countdown .seconds {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    font-size: 11px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button {
+    padding: 5px;
+    font-size: 11px; }
+  .banner-section-style_2 .banner-container .banner__caption .banner__caption--button svg {
+    margin-left: 5px; } }
 
 .latestnews-section-full .latestnews-section {
   width: 100%;

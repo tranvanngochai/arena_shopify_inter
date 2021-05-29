@@ -36,10 +36,11 @@
             display: flex;
             justify-content: space-between;;
             .img_left{
-                height: 887px;
+                height: 848px;
             }
             .img_right{
-                height: 887px;
+                height: 848px;
+                
             }
             
             .slider-item__caption{
@@ -213,8 +214,17 @@
 
 @include desktop{
     .slideshow-container{
+        height: 607px;
         .my-slider{
             .slider-item{
+                .img_left{
+                    width: 400px;
+                    height: 607px;
+                }
+                .img_right{
+                    width: 400px;
+                    height: 607px;
+                }
                 .slider-item__caption{
                     .slider-item__caption-content{
                         p{
@@ -243,6 +253,7 @@
     }
 
     .slideshow-container-style_2{
+        height: 607px;
         .my-slider{
             .slider-item{
                 .img_left{
@@ -282,8 +293,25 @@
 
 @include tablet{
     .slideshow-container{
+        height: 509px;
+        .tns-nav{
+            .tns-nav-active{
+                background: #0F1214 !important;
+                border-radius: 8px !important;
+                width: 25px;
+                height: 4px;
+            }
+        }
         .my-slider{
             .slider-item{
+                .img_left{
+                    width: 335px;
+                    height: 509px;
+                }
+                .img_right{
+                    width: 335px;
+                    height: 509px;
+                }
                 .slider-item__caption{
                     .slider-item__caption-content{
                         p{
@@ -312,6 +340,7 @@
     }
 
     .slideshow-container-style_2{
+        height: 509px;
         .my-slider{
             .slider-item{
                 .img_left{
@@ -351,8 +380,27 @@
 
 @include mobile{
     .slideshow-container{
+        margin-bottom: 20px;
+        height: 258px;
+        .tns-nav{
+            margin: 35px auto 0;
+            .tns-nav-active{
+                background: #0F1214 !important;
+                border-radius: 8px !important;
+                width: 25px;
+                height: 4px;
+            }
+        }
         .my-slider{
             .slider-item{
+                .img_left{
+                    width: 170px;
+                    height: 258px;
+                }
+                .img_right{
+                    width: 170px;
+                    height: 258px;
+                }
                 .slider-item__caption{
                     .slider-item__caption-content{
                         p{
@@ -381,6 +429,8 @@
         }
     }
     .slideshow-container-style_2{
+        height: 258px;
+        margin-bottom: 30px;
         .tns-nav{
             .tns-nav-active{
                 border: 2px solid #876C3D;
@@ -429,8 +479,28 @@
 
 @include mobile-xxs{
     .slideshow-container{
+        height: 230px;
+        margin-bottom: 30px;
+        .tns-nav{
+            margin: 35px auto 0;
+            .tns-nav-active{
+                background: #0F1214 !important;
+                border-radius: 8px !important;
+                width: 15px;
+                height: 4px;
+              
+            }
+        }
         .my-slider{
             .slider-item{
+                .img_left{
+                    width: 170px;
+                    height: 230px;
+                }
+                .img_right{
+                    width: 170px;
+                    height: 230px;
+                }
                 .slider-item__caption{
                     .slider-item__caption-content{
                         p{
@@ -460,6 +530,8 @@
     }
 
     .slideshow-container-style_2{
+        height: 230px;
+        margin-bottom: 30px;
         .tns-nav{
             .tns-nav-active{
                 border: 2px solid #876C3D;
@@ -473,9 +545,11 @@
             .slider-item{
                 .img_left{
                     width: 170px;
+                    height: 230px;
                 }
                 .img_right{
                     width: 170px;
+                    height: 230px;
                 }
                 .slider-item__caption{
                     .slider-item__caption-content{
